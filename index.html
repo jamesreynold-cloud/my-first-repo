@@ -24,10 +24,11 @@
     }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #16213e 75%, #1a1a2e 100%);
+      background: linear-gradient(135deg, rgba(16,24,40,0.6), rgba(7,10,25,0.6)), url('https://images.unsplash.com/photo-1505682634904-d7c9b2d412b6?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center center;
       background-attachment: fixed;
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
+      background-blend-mode: overlay;
       color: #fff;
       position: relative;
     }
@@ -241,6 +242,27 @@
         </div>
       </div>
 
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Project Management</div>
+          <div class="card-back">Agile, SCRUM, stakeholder coordination, roadmaps</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Database Administration</div>
+          <div class="card-back">Postgres/MySQL, backups, replication, performance tuning</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">AI Native Skills</div>
+          <div class="card-back">MLOps, model integration, prompt engineering</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -252,6 +274,9 @@
       <div class="project-item">Fashion Store Platform</div>
       <div class="project-item">Electronics Marketplace</div>
       <div class="project-item">Handmade Crafts Shop</div>
+      <div class="project-item">Agile Launch Dashboard — (Project Management)</div>
+      <div class="project-item">DB Admin Toolkit — (Database Administration)</div>
+      <div class="project-item">AI-native Recommendation Engine — (AI Native Skills)</div>
     </div>
   </section>
 
