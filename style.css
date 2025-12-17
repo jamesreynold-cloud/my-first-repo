@@ -142,8 +142,43 @@ h2 {
 }
 
 .project-item {
-    background: rgba(0, 212, 255, 0.2);
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.18), rgba(243, 80, 22, 0.12));
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    border-left: 6px solid var(--primary, #00ff88);
+    color: #fff;
+    font-size: 1.05em;
+    transition: all 0.25s ease;
+}
+
+.project-item:hover {
+    transform: translateX(6px) scale(1.01);
+    background: linear-gradient(135deg, rgba(51, 134, 252, 0.28), rgba(243, 80, 22, 0.22));
+}
+
+.project-thumb{
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: #fff;
+}
+
+.project-info{flex:1}
+.project-title{font-weight:800;color:#fff}
+.project-meta{margin-top:6px;display:flex;gap:8px;align-items:center}
+.badge{padding:6px 10px;border-radius:999px;font-weight:700;font-size:0.85em}
+.badge.success{background:linear-gradient(90deg,#00C853,#7CFFCB);color:#00221a}
+.meta-text{opacity:0.9;color:#fff;font-weight:600}
+
+@media (max-width:700px){
+  .skill-cards{gap:12px}
+  .card{width:160px;height:140px}
+  .project-thumb{width:80px}
+  section{padding:20px}
+}
 
