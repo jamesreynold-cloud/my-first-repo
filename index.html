@@ -280,6 +280,16 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script>
+    // Inline JS added to ensure functionality on GitHub Pages (external script returned 404)
+    function flipCard(card) {
+      card.classList.toggle("flipped");
+    }
+
+    function toggleProjects() {
+      const projectList = document.querySelector(".project-list");
+      projectList.classList.toggle("hidden");
+    }
+  </script>
 </body>
 </html>
