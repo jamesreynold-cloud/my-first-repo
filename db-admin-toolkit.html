@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB Admin Toolkit</title>
+    <link rel="stylesheet" href="db-admin-toolkit.css">
+</head>
+<body>
+    <header class="store-header">
+        <div class="header-content">
+            <h1>🗄️ DB Admin Toolkit</h1>
+            <p>Professional Database Administration & Monitoring</p>
+        </div>
+    </header>
+
+    <section class="features-section">
+        <h2>Powerful Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <h3>Automated Backups</h3>
+                <p>Automatic scheduled backups with multiple storage options</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Performance Tuning</h3>
+                <p>Optimize queries and database performance automatically</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Replication</h3>
+                <p>Set up and manage database replication effortlessly</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Security & Monitoring</h3>
+                <p>Real-time security monitoring and anomaly detection</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Analytics & Insights</h3>
+                <p>Detailed analytics on database usage and performance</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Maintenance Tasks</h3>
+                <p>Automate routine maintenance and cleanup operations</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="supported-section">
+        <h2>Supported Databases</h2>
+        <div class="databases-grid">
+            <div class="db-badge">PostgreSQL</div>
+            <div class="db-badge">MySQL</div>
+            <div class="db-badge">MongoDB</div>
+            <div class="db-badge">Redis</div>
+            <div class="db-badge">MariaDB</div>
+            <div class="db-badge">Oracle</div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <h2>Licensing Options</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Single Server</h3>
+                <p class="price">$49<span>/month</span></p>
+                <p>Manage 1 database server with full features</p>
+                <button class="pricing-btn" onclick="purchaseLicense('Single Server')">Get License</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Multi-Server</h3>
+                <p class="price">$149<span>/month</span></p>
+                <p>Manage up to 10 database servers</p>
+                <button class="pricing-btn featured-btn" onclick="purchaseLicense('Multi-Server')">Get License</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p class="price">$399<span>/month</span></p>
+                <p>Unlimited servers with premium support</p>
+                <button class="pricing-btn" onclick="purchaseLicense('Enterprise')">Get License</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="purchaseModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="licenseTitle"></h2>
+            <p class="license-price" id="licensePrice"></p>
+            <form id="purchaseForm" onsubmit="completePurchase(event)">
+                <input type="hidden" id="selectedLicense">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Organization</label>
+                    <input type="text" required>
+                </div>
+                <button type="submit" class="submit-btn">Purchase License</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="db-admin-toolkit.js"></script>
+</body>
+</html>

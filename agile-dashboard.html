@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Launch Dashboard</title>
+    <link rel="stylesheet" href="agile-dashboard.css">
+</head>
+<body>
+    <header class="store-header">
+        <div class="header-content">
+            <h1>📊 Agile Launch Dashboard</h1>
+            <p>Project Management & Team Collaboration Platform</p>
+        </div>
+    </header>
+
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Sprint Planning</h3>
+                <p>Organize work into sprints with clear goals and timelines</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Team Collaboration</h3>
+                <p>Real-time collaboration tools for distributed teams</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Analytics & Reports</h3>
+                <p>Track velocity, burndown, and team performance metrics</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Workflow Automation</h3>
+                <p>Automate repetitive tasks and streamline processes</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Smart Notifications</h3>
+                <p>Stay updated with intelligent alert system</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3>Integrations</h3>
+                <p>Connect with 100+ popular tools and platforms</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p class="price">$29<span>/month</span></p>
+                <ul>
+                    <li>✓ Up to 5 projects</li>
+                    <li>✓ 10 team members</li>
+                    <li>✓ Basic analytics</li>
+                </ul>
+                <button class="pricing-btn" onclick="purchasePlan('Starter')">Choose Plan</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Professional</h3>
+                <p class="price">$79<span>/month</span></p>
+                <ul>
+                    <li>✓ Unlimited projects</li>
+                    <li>✓ 50 team members</li>
+                    <li>✓ Advanced analytics</li>
+                    <li>✓ Priority support</li>
+                </ul>
+                <button class="pricing-btn featured-btn" onclick="purchasePlan('Professional')">Choose Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p class="price">$199<span>/month</span></p>
+                <ul>
+                    <li>✓ Unlimited everything</li>
+                    <li>✓ Custom workflows</li>
+                    <li>✓ Dedicated support</li>
+                    <li>✓ SSO & Security</li>
+                </ul>
+                <button class="pricing-btn" onclick="purchasePlan('Enterprise')">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="purchaseModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="planTitle"></h2>
+            <p id="planDescription"></p>
+            <p class="plan-price" id="planPrice"></p>
+            <form id="purchaseForm" onsubmit="completePurchase(event)">
+                <input type="hidden" id="selectedPlan">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Company</label>
+                    <input type="text" required>
+                </div>
+                <button type="submit" class="submit-btn">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="agile-dashboard.js"></script>
+</body>
+</html>
