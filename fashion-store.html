@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pursuit Fashion Store</title>
+    <link rel="stylesheet" href="fashion-store.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="store-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>🛍️ Pursuit Fashion Store</h1>
+                <p>Elevate Your Style</p>
+            </div>
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <h2>Filter by Category</h2>
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="mens">Men's</button>
+            <button class="filter-btn" data-category="womens">Women's</button>
+            <button class="filter-btn" data-category="accessories">Accessories</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Modal for Product Details -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="product-detail">
+                <img id="modalImage" src="" alt="Product">
+                <div class="product-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <p class="price" id="modalPrice"></p>
+                    <div class="size-selector">
+                        <label>Size:</label>
+                        <select id="sizeSelect">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <input type="number" id="quantityInput" min="1" value="1">
+                    </div>
+                    <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="cart-modal-content">
+            <span class="close" id="closeCartBtn">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-summary">
+                <p class="subtotal">Subtotal: $<span id="subtotal">0.00</span></p>
+                <p class="tax">Tax (10%): $<span id="tax">0.00</span></p>
+                <p class="total">Total: $<span id="total">0.00</span></p>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="checkout-modal-content">
+            <span class="close" id="closeCheckoutBtn">&times;</span>
+            <h2>Checkout</h2>
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry</label>
+                        <input type="text" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="text" maxlength="3" required>
+                    </div>
+                </div>
+                <button type="submit" class="complete-purchase-btn">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="fashion-store.js"></script>
+</body>
+</html>
